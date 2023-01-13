@@ -8,7 +8,40 @@
 </head>
 <body>
   <script>
-    console.log(location);
+    const TO_TALK_PARAM = 'talk'
+    const TO_MESSAGE_PARAM = 'message';
+    const TO_PROPOSAL_LIST_PARAM = 'proposals';
+
+    const linksForTalk = [
+      'https://cal.com/zolotyh',
+      'https://cal.com/yaroslav/holyjs',
+      'https://tidycal.com/sem-eleven/15-minute-meeting',
+    ];
+    const linksForMessage = [
+      'https://t.me/sem_eleven',
+      'https://t.me/zolotyh',
+      'https://t.me/losyear',
+    ];
+
+    Array.prototype.random = function () {
+      return this[Math.floor((Math.random()*this.length))];
+    }
+
+    const param = window.location.search.toString().substring(1);
+
+    switch(param){
+      case TO_TALK_PARAM:
+        window.location.href = linksForTalk.random();
+        break;
+      case TO_MESSAGE_PARAM:
+        window.location.href = linksForTalk.random();
+        break;
+      case TO_PROPOSAL_LIST_PARAM:
+        window.location.href = linksForTalk.random();
+        break;
+      default:
+        window.location.href = 'https://holyjs.ru/callforpapers/'
+    }
   </script>
 </body>
 </html>
