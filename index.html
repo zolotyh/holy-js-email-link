@@ -11,12 +11,14 @@
     const TO_TALK_PARAM = 'talk'
     const TO_MESSAGE_PARAM = 'message';
     const TO_PROPOSAL_LIST_PARAM = 'proposals';
+    const THEMES_LINK = 'https://holyjs.ru/callforpapers';
 
     const linksForTalk = [
       'https://cal.com/zolotyh',
       'https://cal.com/yaroslav/holyjs',
       'https://tidycal.com/sem-eleven/15-minute-meeting',
     ];
+    
     const linksForMessage = [
       'https://t.me/sem_eleven',
       'https://t.me/zolotyh',
@@ -37,7 +39,7 @@
         window.location.href = linksForTalk.random();
         break;
       case TO_PROPOSAL_LIST_PARAM:
-        window.location.href = linksForTalk.random();
+        window.location.href = THEMES_LINK;
         break;
       default:
         window.location.href = 'https://holyjs.ru/callforpapers/'
